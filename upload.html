@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Drag and Drop File Upload</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<!-- Zona do Drag&Drop -->
+  <div class="drop-zone">
+	<img src="new_icon.png">
+    <header>Arraste e solte arquivos aqui</header>
+    <span>OU</span>
+    <button>Procurar Arquivo</button>
+    <input type="file" name="myFile" class="drop-zone__input">
+  </div>
+	<!-- Zona do Botão Enviar -->
+  <div class="send-zone">
+	<button>Enviar</button>
+  </div>
+	<!-- Zona da lista de Arquivos -->
+  <div class="file-zone">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+<!--
+Com esse código, posso fazer o seguinte
+	1-O usuario solta o arquivo na area correta
+	2-O nome do arquivo é mostrado assim como um preview
+	3-Agora o usuario clica em 'Enviar'
+	4-O botão Faz com que aquela animação de 'carregando' apareca no centro da tela 
+		até que o upload seja concluido
+	5-Uma vez concluido, agora em uma lista (como aquela mais simples das paginas mais antigas)
+		é criado um novo elemento com o nome do arquivo e um 'X' vermelho para excluí-lo
+	6-Resetamos agora o drag&drop para que este receba mais arquivos
+	7-Terminado o processo de adicionar anexos, o usuario clica em 'Confirmar'
+	
+	Obs-Talvez o processo de carregamento seja necessário acontecer ao clicar o 'Confirmar'
+		Neste caso, ao clicar em 'Confirmar', ele anexa tudo de uma vez no diretorio.
+		Portanto, apos clicar, exibir aquela animação de 'carregando'
+		Com tudo pronto, passar para a próxima pagina.
+ -->
