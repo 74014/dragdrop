@@ -10,15 +10,11 @@
 <body>
 	<!-- Zona do Drag&Drop -->
   <div class="drop-zone">
-	<img src="new_icon.png">
+	<img src="new_icon.png" id="drop-zone-icon">
     <header>Arraste e solte arquivos aqui</header>
     <span>OU</span>
-    <button>Procurar Arquivo</button>
-    <input type="file" name="myFile" class="drop-zone__input">
-  </div>
-	<!-- Zona do Botão Enviar -->
-  <div class="send-zone">
-	<button>Enviar</button>
+    <button id="button_procurar">Procurar Arquivo</button>
+    <input type="file" name="myFile" class="drop-zone__input" multiple>
   </div>
 	<!-- Zona da lista de Arquivos -->
   <div class="file-zone">
@@ -28,19 +24,21 @@
 </body>
 
 <!--
-Com esse código, posso fazer o seguinte
-	1-O usuario solta o arquivo na area correta
-	2-O nome do arquivo é mostrado assim como um preview
-	3-Agora o usuario clica em 'Enviar'
-	4-O botão Faz com que aquela animação de 'carregando' apareca no centro da tela 
-		até que o upload seja concluido
-	5-Uma vez concluido, agora em uma lista (como aquela mais simples das paginas mais antigas)
-		é criado um novo elemento com o nome do arquivo e um 'X' vermelho para excluí-lo
-	6-Resetamos agora o drag&drop para que este receba mais arquivos
-	7-Terminado o processo de adicionar anexos, o usuario clica em 'Confirmar'
-	
-	Obs-Talvez o processo de carregamento seja necessário acontecer ao clicar o 'Confirmar'
-		Neste caso, ao clicar em 'Confirmar', ele anexa tudo de uma vez no diretorio.
-		Portanto, apos clicar, exibir aquela animação de 'carregando'
-		Com tudo pronto, passar para a próxima pagina.
+Utilizando o 'Procurar Arquivo'
+	Ao clicar, abrir o navegador de arquivos
+	Ao selecionar o(s) arquivo(s), criar um objeto para comportar o nome para cada arquivo
+		Esse objeto deve conter o nome do arquivo e o X para remove-lo
+		
+Utilizando o 'DragDrop'
+	Quando o site detectar que tem algum arquivo sendo arrastado
+		Tornar o botão 'Procurar Arquivo' invisivel
+		Tornar o span 'OU' invisivel
+		Tornar o icone da nuvem visível
+		Tornar a borda solida e mais grossa
+	Ao finalmente soltar o arquivo, restaurar essas alterações acima
+	Para cada arquivo arrastado, criar um objeto para comportar o nome para cada arquivo
+		Esse objeto deve conter o nome do arquivo e o X para remove-lo
+ 
+ 
+ 
  -->

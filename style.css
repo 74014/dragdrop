@@ -11,7 +11,8 @@ body{
 
 /* Formatação da zona de drag&drop */
 .drop-zone {
-  max-width: 200px;
+  max-width: 400px;
+  width: 400px;
   height: 200px;
   padding: 25px;
   display: flex;
@@ -21,7 +22,6 @@ body{
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   font-size: 15px;
-  /*cursor: pointer;*/
   color: #999999;
   border: 3px dashed #009578;
   border-radius: 10px;
@@ -61,15 +61,19 @@ body{
 }
 
 /* Icone da nuvem */
-.drop-zone img{
+#drop-zone-icon{
 	width: 50%;
 	height:auto;
 	object-fit: fill;
 	border-radius: 0px;
+	pointer-events: none;
+	display: none;
+	margin: 5% auto;
 }
 
 /* Formatação do botão */
-.drop-zone button{
+/*.drop-zone button{*/
+#button_procurar{
   padding: 5px 15px;
   font-size: 15px;
   font-weight: 500;
@@ -80,17 +84,8 @@ body{
   border-radius: 10px;
   cursor: pointer;
 }
-  
-  /* Formatação do botão */
-.send-zone button{
-  padding: 5px 15px;
-  font-size: 15px;
-  font-weight: 500;
-  border: none;
-  outline: none;
-  background: #009578;
-  color: #fff;
-  border-radius: 10px;
-  cursor: pointer;
+
+span{
+	margin: 5% auto;
 }
   
